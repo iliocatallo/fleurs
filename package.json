@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "c8 --reporter=lcov --reporter=text --include=src uvu -r ts-node/register test .test.ts"
   },
   "volta": {
     "node": "16.15.0",
