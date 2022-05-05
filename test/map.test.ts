@@ -3,7 +3,6 @@ import * as assert from 'uvu/assert';
 import { map } from '../src/map';
 
 test(`map values satisfying the type guard`, () => {
-
 	const input: string | number = 'hello';
 
 	const res = map(isString, (s: string) => s.toUpperCase(), input);
