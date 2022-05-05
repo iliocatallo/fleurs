@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "coverage": "c8 report --reporter=lcov",
     "test": "c8 --reporter=lcov --reporter=text --include=src uvu -r ts-node/register test .test.ts"
   },
   "volta": {
