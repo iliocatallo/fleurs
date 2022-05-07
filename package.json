@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "fmt": "dprint fmt",
     "coverage": "c8 report --reporter=lcov",
     "test": "c8 --reporter=lcov --reporter=text --include=src uvu -r ts-node/register test .test.ts"
   },
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@types/node": "^17.0.31",
     "c8": "^7.11.2",
+    "dprint": "^0.27.1",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4",
     "uvu": "^0.5.3"

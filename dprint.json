@@ -1,0 +1,14 @@
+{
+  "typescript": {
+    "quoteStyle": "preferSingle"
+  },
+  "includes": ["**/*.ts"],
+  "excludes": [
+    "**/dist",
+    "**/node_modules",
+    "**/coverage"
+  ],
+  "plugins": [
+    "https://plugins.dprint.dev/typescript-0.68.2.wasm"
+  ]
+}
