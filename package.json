@@ -20,6 +20,7 @@
     "npm": "8.8.0"
   },
   "devDependencies": {
+    "@arkweid/lefthook": "^0.7.7",
     "@types/node": "^17.0.31",
     "c8": "^7.11.2",
     "dprint": "^0.27.1",

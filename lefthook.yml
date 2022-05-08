@@ -1,0 +1,9 @@
+skip_output:
+  - meta
+  - success
+  - summary
+pre-commit:
+  parallel: false
+  commands:
+    fmt:
+      run: npm run fmt && git add {staged_files}
