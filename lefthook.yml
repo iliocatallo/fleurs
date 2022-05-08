@@ -6,4 +6,5 @@ pre-commit:
   parallel: false
   commands:
     fmt:
-      run: npm run fmt && git add {staged_files}
+      glob: "*.ts"
+      run: npm run fmt {staged_files} && git add {staged_files}
