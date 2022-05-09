@@ -1,6 +1,7 @@
 import { test } from 'uvu';
 import * as assert from 'uvu/assert';
 import { map } from '../src/map';
+import { isString } from './isString';
 
 test(`map transforms values satisfying the type guard`, () => {
   const input: string | number = 'hello';
@@ -17,7 +18,5 @@ test('map ignores values that do not satisfy the type guard', () => {
 
   assert.is(res, 42);
 });
-
-const isString = (x: any): x is string => typeof x == 'string';
 
 test.run();
