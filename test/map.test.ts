@@ -3,7 +3,7 @@ import * as assert from 'uvu/assert';
 import { map } from '../src/map';
 import { isString } from './isString';
 
-test(`map transforms values satisfying the type guard`, () => {
+test(`map transforms values that satisfy the type guard`, () => {
   const input: string | number = 'hello';
 
   const res = map(isString, (s: string) => s.toUpperCase(), input);
