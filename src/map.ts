@@ -1,4 +1,4 @@
-export function map<T, R, O>(guard: Guard<T>, mapper: Mapper<T, O>, x: T | R): O | R {
+export function map<T, R, U>(guard: Guard<T>, mapper: Mapper<T, U>, x: T | R): U | R {
   if (guard(x)) {
     return mapper(x);
   }
@@ -6,4 +6,4 @@ export function map<T, R, O>(guard: Guard<T>, mapper: Mapper<T, O>, x: T | R): O
 }
 
 type Guard<T> = (x: any) => x is T;
-type Mapper<T, O> = (x: T) => O;
+type Mapper<T, U> = (x: T) => U;
