@@ -1,7 +1,7 @@
 {
   "author": "Ilio Catallo <info@iliocatallo.it>",
   "name": "fleurs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utilities for union types in TS",
   "homepage": "https://github.com/iliocatallo/fleurs#readme",
   "license": "MIT",
