@@ -5,6 +5,10 @@
   "description": "Utilities for union types in TS",
   "homepage": "https://github.com/iliocatallo/fleurs#readme",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iliocatallo/fleurs.git"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
