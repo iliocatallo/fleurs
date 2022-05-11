@@ -1,4 +1,4 @@
-export function map<T, R, U>(guard: Guard<T>, mapper: Mapper<T, U>, x: T | R): U | R {
+export function mapIf<T, R, U>(guard: Guard<T>, mapper: Mapper<T, U>, x: T | R): U | R {
   if (guard(x)) {
     return mapper(x);
   }
