@@ -3,6 +3,7 @@
   "name": "fleurs",
   "version": "0.0.1",
   "description": "Utilities for union types in TS",
+  "homepage": "https://github.com/iliocatallo/fleurs#readme",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
