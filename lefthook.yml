@@ -8,3 +8,9 @@ pre-commit:
     fmt:
       glob: "*.ts"
       run: npm run fmt {staged_files} && git add {staged_files}
+
+pre-push:
+  parallel: false
+  commands:
+    test:
+      run: npm test
