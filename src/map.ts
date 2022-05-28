@@ -1,17 +1,17 @@
 import { Guard } from './Guard';
 
-export function mapIf<H, R, O>(guard: Guard<H>, mapper: Mapper<H, O>, x: H | R): O | R {
+export function mapIf<U, H extends U, O>(guard: Guard<H>, mapper: Mapper<H, O>, x: U): Exclude<U, H> | O {
   if (guard(x)) {
     return mapper(x);
   }
-  return x;
+  return x as Exclude<U, H>;
 }
 
-export function mapUnless<H, R, O>(guard: Guard<H>, mapper: Mapper<R, O>, x: H | R): H | O {
+export function mapUnless<U, H extends U, O>(guard: Guard<H>, mapper: Mapper<Exclude<U, H>, O>, x: U): H | O {
   if (guard(x)) {
     return x;
   }
-  return mapper(x);
+  return mapper(x as Exclude<U, H>);
 }
 
-type Mapper<T, O> = (x: T) => O;
+type Mapper<A, B> = (x: A) => B;
