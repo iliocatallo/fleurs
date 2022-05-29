@@ -9,8 +9,8 @@ test(`values that satisfy the type guard get transformed`, () => {
 
   const res = mapIf(isString, (s: string) => true, input);
 
-  expectType<number | boolean>(res);
   assert.is(res, true);
+  expectType<number | boolean>(res);
 });
 
 test('values that do not satisfy the type guard are returned as-is', () => {
@@ -18,8 +18,8 @@ test('values that do not satisfy the type guard are returned as-is', () => {
 
   const res = mapIf(isString, (s: string) => true, input);
 
-  expectType<number | boolean>(res);
   assert.is(res, 42);
+  expectType<number | boolean>(res);
 });
 
 test.run();
