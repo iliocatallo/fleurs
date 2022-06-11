@@ -6,7 +6,7 @@ import { mapIf } from '../src/map';
 test(`values that satisfy the type guard get transformed`, () => {
   const input = 'hello';
 
-  const res = mapIf(isString, (s: string) => true, input);
+  const res = mapIf(guard, (s: string) => true, input);
 
   assert.is(res, true);
   expectType<number | boolean>(res);
@@ -15,7 +15,7 @@ test(`values that satisfy the type guard get transformed`, () => {
 test('values that do not satisfy the type guard are returned as-is', () => {
   const input = 42;
 
-  const res = mapIf(isString, (s: string) => true, input);
+  const res = mapIf(guard, (s: string) => true, input);
 
   assert.is(res, 42);
   expectType<number | boolean>(res);
@@ -23,4 +23,4 @@ test('values that do not satisfy the type guard are returned as-is', () => {
 
 test.run();
 
-const isString = (x: string | number): x is string => typeof x == 'string';
+const guard = (x: string | number): x is string => typeof x == 'string';
