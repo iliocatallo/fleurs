@@ -26,7 +26,7 @@
     "dprint": "^0.52.0",
     "lefthook": "^2.1.1",
     "ts-expect": "^1.3.0",
-    "ts-node": "^10.8.0",
+    "ts-node": "^10.9.2",
     "typescript": "^4.7.2",
     "uvu": "^0.5.3"
   }
