@@ -1,6 +1,6 @@
+import assert from 'node:assert/strict';
+import { test } from 'node:test';
 import { expectType } from 'ts-expect';
-import { test } from 'uvu';
-import * as assert from 'uvu/assert';
 import { mapUnless } from '../src/map';
 
 test(`values that do not satisfy the the type guard get transformed`, () => {
@@ -8,7 +8,7 @@ test(`values that do not satisfy the the type guard get transformed`, () => {
 
   const res = mapUnless(guard, (x: number) => true, input);
 
-  assert.is(res, true);
+  assert.equal(res, true);
   expectType<string | boolean>(res);
 });
 
@@ -17,10 +17,8 @@ test(`values that satisfy the type guard are returned as-is`, () => {
 
   const res = mapUnless(guard, (x: number) => true, input);
 
-  assert.is(res, 'hello');
+  assert.equal(res, 'hello');
   expectType<string | boolean>(res);
 });
-
-test.run();
 
 const guard = (x: string | number): x is string => typeof x == 'string';

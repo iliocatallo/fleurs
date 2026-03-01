@@ -18,7 +18,7 @@
     "build": "tsc",
     "fmt": "dprint fmt",
     "coverage": "c8 report --reporter=lcov",
-    "test": "c8 --reporter=lcov --reporter=text --include=src uvu -r ts-node/register test .test.ts"
+    "test": "c8 --reporter=lcov --reporter=text --include=src node -r ts-node/register --test test/**.test.ts"
   },
   "devDependencies": {
     "@types/node": "^25.3.3",
@@ -27,7 +27,6 @@
     "lefthook": "^2.1.1",
     "ts-expect": "^1.3.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3",
-    "uvu": "^0.5.3"
+    "typescript": "^5.9.3"
   }
 }

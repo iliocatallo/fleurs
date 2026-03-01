@@ -1,5 +1,5 @@
+import { test } from 'node:test';
 import { expectType, TypeEqual } from 'ts-expect';
-import { test } from 'uvu';
 import { In, Out } from '../src/Guard';
 
 test(`A guard mentions a type in its type predicate`, () => {
@@ -13,5 +13,3 @@ test(`A guard mentions a type in its input parameter`, () => {
 
   expectType<TypeEqual<In<IsString>, number | string>>(true);
 });
-
-test.run();
